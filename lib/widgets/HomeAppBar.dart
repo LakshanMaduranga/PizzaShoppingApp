@@ -1,5 +1,6 @@
-import 'package:badges/badges.dart';
+
 import 'package:flutter/material.dart';
+
 
 class HomeAppBar extends StatelessWidget {
   @override
@@ -29,25 +30,24 @@ class HomeAppBar extends StatelessWidget {
           ),
           Spacer(),
 
-          // Badge(
-          //  badgeColor:Colors.red,
-          //   padding: EdgeInsets.all(7),
-          //   badgeContent: Text(
-          //     "3",
-          //     style: TextStyle(
-          //       color: Colors.white,
-          //
-          //     ),
-          //   ),
-          // child:InkWell(
-          //   onTap: (){},
-          //   child:Icon(
-          //     Icons.shopping_cart,
-          //     size: 32,
-          //     color: Color(0xFF4C53A5),
-          //   ),
-          // ),
-          // )
+
+
+         Badge(
+           largeSize:20.0,
+            label: Text(
+              "2",
+
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 15,
+              ),
+            ),
+            child: Icon(
+              Icons.shopping_cart,
+              size: 40,
+              color: Color(0xFF4C53A5),
+            ),
+         ),
         ],
       ),
     );
