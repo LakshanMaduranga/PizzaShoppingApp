@@ -26,12 +26,16 @@ class CartAppBar extends StatelessWidget {
               style: TextStyle(
                 fontSize: 23,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFEE3A43),
+                color:  Colors.black,
               ),
             ),
           ),
-
-
+            Spacer(),
+            Icon(
+              Icons.more_vert,
+              size: 30,
+              color:  Colors.black,
+            ),
         ]),
     );
   }
