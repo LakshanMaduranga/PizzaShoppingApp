@@ -10,7 +10,7 @@ class ItemsWidget extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       children: [
-        for(int i=1;i<13;i++)
+        for(int i=1;i<14;i++)
         Container(
           padding: EdgeInsets.only(left: 15, right: 15, top: 10),
           margin: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -44,7 +44,9 @@ class ItemsWidget extends StatelessWidget {
                 ],
               ),
               InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, "itemPage");
+                  },
                   child: Image.asset(
                     "images/$i.png",
                     height: 120,

@@ -35,7 +35,7 @@ class HomeAppBar extends StatelessWidget {
          Badge(
            largeSize:20.0,
             label: Text(
-              "2",
+              "3",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 15,

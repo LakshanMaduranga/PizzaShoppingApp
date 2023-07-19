@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/widgets/CartAppBar.dart';
+import 'package:shop_app/widgets/CartBottomNavBar.dart';
 import 'package:shop_app/widgets/CartItemSamples.dart';
 
 class CartPage extends StatelessWidget {
@@ -41,6 +42,18 @@ class CartPage extends StatelessWidget {
                           ),
                         ),
 
+                        Padding(
+                         padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            "Add Promo Code Here",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+
                       ],
                     ),
                   ),
@@ -48,6 +61,7 @@ class CartPage extends StatelessWidget {
             ),
           ],
         ),
+      bottomNavigationBar: CartBottomNavBar(),
     );
   }
 
