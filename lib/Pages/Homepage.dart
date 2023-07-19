@@ -113,7 +113,7 @@ class HomePage extends StatelessWidget {
 
           Icon(Icons.shopping_cart_checkout, size: 30),
           Icon(Icons.home, size: 30),
-          Icon(Icons.compare_arrows, size: 30),
+          Icon(Icons.menu, size: 30),
         ],
       ),
     );

@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shop_app/widgets/ItemAppBar.dart';
+import 'package:shop_app/widgets/ItemBottomNavBar.dart';
 
 class ItemPage extends StatelessWidget {
   @override
@@ -28,7 +29,7 @@ class ItemPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 50, bottom: 20),
+                      padding: EdgeInsets.only(top: 48, bottom: 15),
                       child: Row(
                         children: [
                           Text("Product Title",
@@ -226,6 +227,7 @@ class ItemPage extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: ItemBottomNavBar(),
     );
   }
 }
