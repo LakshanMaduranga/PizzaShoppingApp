@@ -1,4 +1,7 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:shop_app/widgets/CategoriesWidget.dart';
+import 'package:shop_app/widgets/ItemsWidget.dart';
 import '../widgets/HomeAppBar.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,8 +13,9 @@ class HomePage extends StatelessWidget {
           HomeAppBar(),
           Container(
             //tempory height
-            height: 500,
-            padding: EdgeInsets.only(top: 20,
+            //height: 500,
+            padding: EdgeInsets.only(
+              top: 20,
             ),
             decoration: BoxDecoration(
               color: Color(0xFFEDECF2),
@@ -22,6 +26,8 @@ class HomePage extends StatelessWidget {
             ),
             child: Column(
               children: [
+                ////////////////////////////////////////////////////////////////
+                //search widgets
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 15),
                   padding: EdgeInsets.symmetric(horizontal: 15),
@@ -39,21 +45,23 @@ class HomePage extends StatelessWidget {
                         child: TextFormField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: "search Here",
+                            hintText: "Search Here",
                           ),
                         ),
                       ),
                       Spacer(),
                       Icon(
-                        Icons.camera_alt,
+                        Icons.search,
                         size: 25,
-                        color: Color(0xFF4C53A5),
+                        color: Color(0xFF0E0A0A),
                       )
                     ],
                   ),
                 ),
+                ////////////////////////////////////////////////////////////////
+                //Catogery widget
                 Container(
-                  alignment:Alignment.centerLeft,
+                  alignment: Alignment.centerLeft,
                   margin: EdgeInsets.symmetric(
                     vertical: 20,
                     horizontal: 10,
@@ -67,9 +75,45 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
+                ////////////////////////////////////////////////////////////////
+                //categories Widget
+                CategoriesWidget(),
+
+                ////////////////////////////////////////////////////////////////
+                //Item text
+
+                Container(
+                  alignment: Alignment.centerLeft,
+                  margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                  child: Text(
+                    "Best Sellings",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF4C53A5),
+                    ),
+                  ),
+                ),
+                ////////////////////////////////////////////////////////////////
+                //item widgets
+                ItemsWidget(),
               ],
             ),
           ),
+        ],
+      ),
+      //////////////////////////////////////////////////////////////////
+      // Navigation Bar
+      bottomNavigationBar:CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+        height: 70,
+        onTap: (index){},
+        color: Color(0xFFEE3A43),
+        items: <Widget>[
+
+          Icon(Icons.shopping_cart_checkout, size: 30),
+          Icon(Icons.home, size: 30),
+          Icon(Icons.menu, size: 30),
         ],
       ),
     );

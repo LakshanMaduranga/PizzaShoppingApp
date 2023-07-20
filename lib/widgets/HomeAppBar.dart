@@ -13,7 +13,7 @@ class HomeAppBar extends StatelessWidget {
           Icon(
             Icons.sort,
             size: 30,
-            color: Color(0xFF4C53A5),
+            color: Color(0xFF0E0A0A),
           ),
           Padding(
             padding: EdgeInsets.only(
@@ -24,7 +24,7 @@ class HomeAppBar extends StatelessWidget {
               style: TextStyle(
                 fontSize: 23,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF4C53A5),
+                color: Color(0xFFEE3A43),
               ),
             ),
           ),
@@ -35,18 +35,23 @@ class HomeAppBar extends StatelessWidget {
          Badge(
            largeSize:20.0,
             label: Text(
-              "2",
-
+              "3",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 15,
               ),
             ),
-            child: Icon(
-              Icons.shopping_cart,
-              size: 40,
-              color: Color(0xFF4C53A5),
+            child: InkWell(
+              onTap: (){
+                Navigator.pushNamed(context, "cartPage");
+              },
+              child: Icon(
+                Icons.shopping_cart,
+                size: 40,
+                color: Color(0xFF0E0A0A),
+              ),
             ),
+
          ),
         ],
       ),
