@@ -5,8 +5,8 @@ class CategoriesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     List list = [
       "Vegie pizza",
-      "chicken pizza",
-      "cheese pizza",
+      "Chicken pizza",
+      "Cheese pizza",
       "Beef Pizza",
       "Beef Burger",
       "Sausage Burger",
@@ -38,8 +38,11 @@ class CategoriesWidget extends StatelessWidget {
                 width: 40,
                 height: 40,
                 ),
+
+                SizedBox(width: 10,),
                 Text(
-                    list[i-1],
+                  list[i-1],
+
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 17,

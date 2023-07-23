@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class ItemsWidget extends StatelessWidget {
   List title = [
     "Vegie pizza",
-    "chicken pizza",
-    "cheese pizza",
+    "Chicken pizza",
+    "Cheese pizza",
     "Beef Pizza",
     "Beef Burger",
     "Sausage Burger",
@@ -69,6 +69,7 @@ class ItemsWidget extends StatelessWidget {
                     width: 120,
                   ),
                 ),
+                SizedBox(height: 10,),
                 Container(
                   padding: EdgeInsets.only(bottom: 8),
                   // alignment: Alignment.centerLeft,
