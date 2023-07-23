@@ -1,10 +1,26 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:shop_app/Pages/CartPage.dart';
+import 'package:shop_app/Pages/ItemPage.dart';
 import 'package:shop_app/widgets/CategoriesWidget.dart';
 import 'package:shop_app/widgets/ItemsWidget.dart';
 import '../widgets/HomeAppBar.dart';
 
 class HomePage extends StatelessWidget {
+  int index=1;
+ //  final items=<Widget>[
+ //    Icon(Icons.shopping_cart_checkout, size: 30,color: Colors.white),
+ //    Icon(Icons.home, size: 30,color: Colors.white),
+ //    Icon(Icons.menu, size: 30,color: Colors.white),
+ //  ];
+ //  final screens=[
+ //    CartPage(),
+ //    HomePage(),
+ //    ItemPage(),
+ //
+ //  ];
+ //
+
   @override
   Widget build(BuildContext contrxt) {
     return Scaffold(
@@ -104,16 +120,18 @@ class HomePage extends StatelessWidget {
       ),
       //////////////////////////////////////////////////////////////////
       // Navigation Bar
-      bottomNavigationBar:CurvedNavigationBar(
+      bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
-        height: 70,
-        onTap: (index){},
+        height: 50,
+        index: index,
+        onTap: (index) {},
         color: Color(0xFFEE3A43),
         items: <Widget>[
 
-          Icon(Icons.shopping_cart_checkout, size: 30),
-          Icon(Icons.home, size: 30),
-          Icon(Icons.menu, size: 30),
+              Icon(Icons.shopping_cart_checkout, size: 30,color: Colors.white),
+              Icon(Icons.home, size: 30,color: Colors.white),
+              Icon(Icons.menu, size: 30,color: Colors.white),
+
         ],
       ),
     );

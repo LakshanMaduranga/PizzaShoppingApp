@@ -9,7 +9,7 @@ class CartItemSamples extends StatelessWidget {
         for (int i = 1; i < 4; i++)
           Container(
             height: 110,
-            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            margin: EdgeInsets.symmetric(horizontal: 8, vertical: 3),
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -36,7 +36,7 @@ class CartItemSamples extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Product Title",
+                        "Product ",
                         style: TextStyle(
                           fontSize: 23,
                           fontWeight: FontWeight.bold,
