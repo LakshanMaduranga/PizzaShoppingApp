@@ -3,6 +3,21 @@ import 'package:flutter/material.dart';
 class CategoriesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List list = [
+      "Vegie pizza",
+      "Chicken pizza",
+      "Cheese pizza",
+      "Beef Pizza",
+      "Beef Burger",
+      "Sausage Burger",
+      "Chicken Burger",
+      "Melon Juice",
+      "Lemon Juice",
+      "Pepsi Cola",
+      "Coca Cola",
+      "Cherry Ice Cream",
+      "Choco Ice Cream",
+    ];
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
@@ -23,8 +38,11 @@ class CategoriesWidget extends StatelessWidget {
                 width: 40,
                 height: 40,
                 ),
+
+                SizedBox(width: 10,),
                 Text(
-                    "Pizza",
+                  list[i-1],
+
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 17,
