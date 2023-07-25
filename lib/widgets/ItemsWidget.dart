@@ -99,7 +99,7 @@ class ItemsWidget extends StatelessWidget {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "product description is under this section",
+                    title[i - 1],
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.black,
