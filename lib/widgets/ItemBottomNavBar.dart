@@ -24,7 +24,7 @@ class ItemBottomNavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "\$120",
+            "\$15",
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
@@ -33,7 +33,7 @@ class ItemBottomNavBar extends StatelessWidget {
           ),
           ElevatedButton.icon(
             onPressed: () {},
-            icon: Icon(CupertinoIcons.calendar_badge_plus),
+            icon: Icon(CupertinoIcons.cart_fill),
             label: Text(
               "Add To Cart",
               style: TextStyle(

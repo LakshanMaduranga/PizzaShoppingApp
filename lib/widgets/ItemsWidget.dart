@@ -16,6 +16,21 @@ class ItemsWidget extends StatelessWidget {
     "Cherry Ice Cream",
     "Choco Ice Cream",
   ];
+  List price =[
+    "\$ 7.00",
+    "\$ 8.00",
+    "\$ 10.00",
+    "\$ 15.00",
+    "\$ 10.00",
+    "\$ 8.00",
+    "\$ 9.00",
+    "\$ 7.00",
+    "\$ 6.00",
+    "\$ 3.00",
+    "\$ 4.00",
+    "\$ 5.00",
+    "\$ 8.00",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +60,7 @@ class ItemsWidget extends StatelessWidget {
                           color: Colors.redAccent,
                           borderRadius: BorderRadius.circular(20)),
                       child: Text(
-                        "-50%",
+                        "-25%",
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.white,
@@ -53,10 +68,11 @@ class ItemsWidget extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     Icon(
                       Icons.favorite_border,
-                      color: Colors.red,
-                    )
+                      color: Colors.redAccent,
+                    ),
                   ],
                 ),
                 InkWell(
@@ -83,15 +99,6 @@ class ItemsWidget extends StatelessWidget {
                     ),
                   ),
 
-                  //this will add same product title for all products
-                  // child: Text(
-                  //   "Product Title",
-                  //   style: TextStyle(
-                  //     fontSize: 18,
-                  //     color: Colors.redAccent,
-                  //     fontWeight: FontWeight.bold,
-                  //   ),
-                  // ),
                 ),
 
                 // product description
@@ -115,7 +122,7 @@ class ItemsWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "\$15",
+                        price[i - 1],
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.redAccent,

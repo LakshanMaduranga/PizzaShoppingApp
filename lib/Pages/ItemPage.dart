@@ -32,7 +32,7 @@ class ItemPage extends StatelessWidget {
                       padding: EdgeInsets.only(top: 48, bottom: 15),
                       child: Row(
                         children: [
-                          Text("Product Title",
+                          Text("Vegie Pizza",
                               style: TextStyle(
                                   fontSize: 28,
                                   color: Colors.redAccent,
@@ -115,7 +115,7 @@ class ItemPage extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 12),
                       child: Text(
-                        "This is detailed description of the product,pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot.",
+                        "The Veggie Pizza is a delectable variation of the classic pizza, specially crafted for veggie lovers and health-conscious individuals. This mouthwatering delight features a thin or thick crust as its base, generously topped with an array of colorful and fresh vegetables. From juicy tomatoes and sweet bell peppers to earthy mushrooms and zesty onions, every bite bursts with natural flavors and textures. Additionally, it may include nutritious ingredients like spinach, zucchini, broccoli, and artichokes, providing a wholesome and satisfying experience. Finished with a layer of melted mozzarella or dairy-free cheese, the Veggie Pizza is a guilt-free indulgence that promises to delight your taste buds while celebrating the goodness of nature's bounty.",
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontSize: 17,
@@ -139,87 +139,37 @@ class ItemPage extends StatelessWidget {
                             width: 10,
                           ),
                           Row(
-
                             children: [
-                              for(int i=1;i<4;i++)
-                              Container(
-                                height: 30,
-                                width: 70,
-                                alignment: Alignment.center,
-                                margin: EdgeInsets.symmetric(horizontal: 5),
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(30),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.grey.withOpacity(0.5),
-                                        spreadRadius: 2,
-                                        blurRadius: 8,
-                                      )
-                                    ]),
-                                child: Text(
-                                  i.toString(),
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
+                              for (int i = 1; i < 4; i++)
+                                Container(
+                                  height: 30,
+                                  width: 70,
+                                  alignment: Alignment.center,
+                                  margin: EdgeInsets.symmetric(horizontal: 5),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(30),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 2,
+                                          blurRadius: 8,
+                                        )
+                                      ]),
+                                  child: Text(
+                                    i.toString(),
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                              ),
                             ],
                           ),
                         ],
                       ),
                     ),
-
-                    // Padding(
-                    //   padding: EdgeInsets.symmetric(vertical: 8),
-                    //   child: Row(
-                    //     children: [
-                    //       Text(
-                    //         "Size",
-                    //         style: TextStyle(
-                    //           fontSize: 18,
-                    //           color: Colors.black,
-                    //           fontWeight: FontWeight.bold,
-                    //         ),
-                    //       ),
-                    //       SizedBox(
-                    //         width: 10,
-                    //       ),
-                    //       Row(
-                    //
-                    //         children: [
-                    //           for(int i=1;i<4;i++)
-                    //             Container(
-                    //               height: 30,
-                    //               width: 70,
-                    //               alignment: Alignment.center,
-                    //               margin: EdgeInsets.symmetric(horizontal: 5),
-                    //               decoration: BoxDecoration(
-                    //                   color: Colors.white,
-                    //                   borderRadius: BorderRadius.circular(30),
-                    //                   boxShadow: [
-                    //                     BoxShadow(
-                    //                       color: Colors.grey.withOpacity(0.5),
-                    //                       spreadRadius: 2,
-                    //                       blurRadius: 8,
-                    //                     )
-                    //                   ]),
-                    //               child: Text(
-                    //                 i.toString(),
-                    //                 style: TextStyle(
-                    //                   fontSize: 18,
-                    //                   color: Colors.black,
-                    //                   fontWeight: FontWeight.bold,
-                    //                 ),
-                    //               ),
-                    //             ),
-                    //         ],
-                    //       ),
-                    //     ],
-                    //   ),
-                    // )
                   ],
                 ),
               ),

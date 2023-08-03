@@ -8,19 +8,6 @@ import '../widgets/HomeAppBar.dart';
 
 class HomePage extends StatelessWidget {
   int index=1;
- //  final items=<Widget>[
- //    Icon(Icons.shopping_cart_checkout, size: 30,color: Colors.white),
- //    Icon(Icons.home, size: 30,color: Colors.white),
- //    Icon(Icons.menu, size: 30,color: Colors.white),
- //  ];
- //  final screens=[
- //    CartPage(),
- //    HomePage(),
- //    ItemPage(),
- //
- //  ];
- //
-
   @override
   Widget build(BuildContext contrxt) {
     return Scaffold(
@@ -28,9 +15,7 @@ class HomePage extends StatelessWidget {
         children: [
           HomeAppBar(),
           Container(
-            //tempory height
-            //height: 500,
-            padding: EdgeInsets.only(
+            padding:  EdgeInsets.only(
               top: 20,
             ),
             decoration: BoxDecoration(
@@ -42,7 +27,6 @@ class HomePage extends StatelessWidget {
             ),
             child: Column(
               children: [
-                ////////////////////////////////////////////////////////////////
                 //search widgets
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 15),
@@ -110,7 +94,6 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                ////////////////////////////////////////////////////////////////
                 //item widgets
                 ItemsWidget(),
               ],
@@ -118,22 +101,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      //////////////////////////////////////////////////////////////////
-      // Navigation Bar
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.transparent,
-        height: 50,
-        index: index,
-        onTap: (index) {},
-        color: Color(0xFFEE3A43),
-        items: <Widget>[
 
-              Icon(Icons.shopping_cart_checkout, size: 30,color: Colors.white),
-              Icon(Icons.home, size: 30,color: Colors.white),
-              Icon(Icons.menu, size: 30,color: Colors.white),
-
-        ],
-      ),
     );
   }
 }
