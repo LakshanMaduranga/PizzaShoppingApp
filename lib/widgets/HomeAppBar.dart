@@ -32,27 +32,27 @@ class HomeAppBar extends StatelessWidget {
 
 
 
-         Badge(
-           largeSize:20.0,
-            label: Text(
-              "3",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 15,
-              ),
-            ),
-            child: InkWell(
-              onTap: (){
-                Navigator.pushNamed(context, "cartPage");
-              },
-              child: Icon(
-                Icons.shopping_cart,
-                size: 40,
-                color: Color(0xFF0E0A0A),
-              ),
-            ),
-
-         ),
+         // Badge(
+         //   largeSize:20.0,
+         //    label: Text(
+         //      "3",
+         //      style: TextStyle(
+         //        color: Colors.white,
+         //        fontSize: 15,
+         //      ),
+         //    ),
+         //    child: InkWell(
+         //      onTap: (){
+         //        Navigator.pushNamed(context, "cartPage");
+         //      },
+         //      child: Icon(
+         //        Icons.shopping_cart,
+         //        size: 40,
+         //        color: Color(0xFF0E0A0A),
+         //      ),
+         //    ),
+         //
+         // ),
         ],
       ),
     );

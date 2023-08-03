@@ -2,6 +2,35 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CartItemSamples extends StatelessWidget {
+  List title = [
+    "Vegie pizza",
+    "Chicken pizza",
+    "Cheese pizza",
+    "Beef Pizza",
+    "Beef Burger",
+    "Sausage Burger",
+    "Chicken Burger",
+    "Melon Juice",
+    "Lemon Juice",
+    "Pepsi Cola",
+    "Coca Cola",
+    "Cherry Ice Cream",
+    "Choco Ice Cream",
+  ];
+  List price = [
+    "\$10.00",
+    "\$15.00",
+    "\$20.00",
+    "\$15.00",
+    "\$12.00",
+    "\$6.00",
+    "\$5.00",
+    "\$7.00",
+    "\$8.00",
+    "\$3.00",
+    "\$0.00",
+    "\$5.00",
+  ];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,15 +65,15 @@ class CartItemSamples extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Product ",
+                        title[i - 1],
                         style: TextStyle(
-                          fontSize: 23,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFFEE3A43),
                         ),
                       ),
                       Text(
-                        "\$55",
+                        price[i - 1],
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
