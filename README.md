@@ -1,4 +1,4 @@
-# shop_app
+# Hot Pizza
 
 Shopping application for Pizza Hut
 
