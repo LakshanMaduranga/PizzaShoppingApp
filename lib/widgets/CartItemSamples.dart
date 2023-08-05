@@ -31,6 +31,7 @@ class CartItemSamples extends StatelessWidget {
     "\$0.00",
     "\$5.00",
   ];
+
   @override
   Widget build(BuildContext context) {
     return Column(

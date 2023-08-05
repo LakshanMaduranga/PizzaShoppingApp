@@ -27,22 +27,22 @@ class IceCreamPage extends StatelessWidget {
         ),
       ),
       body: GridView.count(
+        padding: EdgeInsets.all(10),
         crossAxisCount: 2,
-        //disable scroll functionallity of grid view and will scroll with list view only
-        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         children: [
-          for (int index = 0; index < pizzaItems.length; index++)
-            PizzaCard(
-              name: pizzaItems[index].name,
-              imagePath: pizzaItems[index].imagePath,
+          for (int index = 0; index < IceCreamItems.length; index++)
+            IceCreamCard(
+              name: IceCreamItems[index].name,
+              imagePath: IceCreamItems[index].imagePath,
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ItemPage(
-                      name: pizzaItems[index].name,
-                      imagePath: pizzaItems[index].imagePath,
+                      name: IceCreamItems[index].name,
+                      imagePath: IceCreamItems[index].imagePath,
+                      description: IceCreamItems[index].description,
                     ),
                   ),
                 );
@@ -54,12 +54,12 @@ class IceCreamPage extends StatelessWidget {
   }
 }
 
-class PizzaCard extends StatelessWidget {
+class IceCreamCard extends StatelessWidget {
   final String name;
   final String imagePath;
   final VoidCallback onPressed;
 
-  PizzaCard({
+  IceCreamCard({
     required this.name,
     required this.imagePath,
     required this.onPressed,
@@ -100,8 +100,10 @@ class PizzaCard extends StatelessWidget {
 class ItemPage extends StatelessWidget {
   final String name;
   final String imagePath;
+  final String description;
 
-  ItemPage({required this.name, required this.imagePath});
+  ItemPage(
+      {required this.name, required this.imagePath, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -127,25 +129,36 @@ class ItemPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              imagePath,
-              height: 200,
-              width: 200,
-            ),
-            SizedBox(height: 16),
-            Text(
-              name,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+      //i want to place body part in scroll view
+
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Image.asset(
+                imagePath,
+                height: 200,
+                width: 200,
               ),
-            ),
-            // Add more details or actions related to the specific item here
-          ],
+              SizedBox(height: 16),
+              Text(
+                "About ",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                description,
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -153,27 +166,25 @@ class ItemPage extends StatelessWidget {
 }
 
 // Replace the imagePath with the actual paths to your pizza images
-class PizzaItem {
+class IceCreamItem {
   final String name;
   final String imagePath;
+  final description;
 
-  PizzaItem({required this.name, required this.imagePath});
+  IceCreamItem({required this.name, required this.imagePath, this.description});
 }
 
-List<PizzaItem> pizzaItems = [
-  // PizzaItem(
-  //   name: 'Vegie pizza',
-  //   imagePath: 'images/5.png',
-  // ),
-  PizzaItem(
-    name: 'Cherry ice cream',
+List<IceCreamItem> IceCreamItems = [
+  IceCreamItem(
+    name: 'Cherry Ice Cream',
     imagePath: 'images/12.png',
+    description:
+        'Cherry Ice Cream is a world famous Ice Cream,Which is made from Cherry',
   ),
-  PizzaItem(
-    name: 'Chocolate ice cream',
+  IceCreamItem(
+    name: 'Chocolate Ice Cream',
     imagePath: 'images/13.png',
+    description:
+        'Chocolate Ice Cream is a world famous Ice Cream,Which is made from Chocolate',
   ),
-
-
-  // Add more pizza items here if needed
 ];

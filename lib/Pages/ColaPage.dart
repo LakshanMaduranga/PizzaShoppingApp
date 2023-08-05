@@ -27,22 +27,22 @@ class ColaPage extends StatelessWidget {
         ),
       ),
       body: GridView.count(
+        padding: EdgeInsets.all(10),
         crossAxisCount: 2,
-        //disable scroll functionallity of grid view and will scroll with list view only
-        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         children: [
-          for (int index = 0; index < pizzaItems.length; index++)
-            PizzaCard(
-              name: pizzaItems[index].name,
-              imagePath: pizzaItems[index].imagePath,
+          for (int index = 0; index < ColaItems.length; index++)
+            ColaCard(
+              name: ColaItems[index].name,
+              imagePath: ColaItems[index].imagePath,
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ItemPage(
-                      name: pizzaItems[index].name,
-                      imagePath: pizzaItems[index].imagePath,
+                      name: ColaItems[index].name,
+                      imagePath: ColaItems[index].imagePath,
+                      description: ColaItems[index].description,
                     ),
                   ),
                 );
@@ -54,12 +54,12 @@ class ColaPage extends StatelessWidget {
   }
 }
 
-class PizzaCard extends StatelessWidget {
+class ColaCard extends StatelessWidget {
   final String name;
   final String imagePath;
   final VoidCallback onPressed;
 
-  PizzaCard({
+  ColaCard({
     required this.name,
     required this.imagePath,
     required this.onPressed,
@@ -100,8 +100,10 @@ class PizzaCard extends StatelessWidget {
 class ItemPage extends StatelessWidget {
   final String name;
   final String imagePath;
+  final String description;
 
-  ItemPage({required this.name, required this.imagePath});
+  ItemPage(
+      {required this.name, required this.imagePath, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -127,25 +129,36 @@ class ItemPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              imagePath,
-              height: 200,
-              width: 200,
-            ),
-            SizedBox(height: 16),
-            Text(
-              name,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+      //i want to place body part in scroll view
+
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Image.asset(
+                imagePath,
+                height: 200,
+                width: 200,
               ),
-            ),
-            // Add more details or actions related to the specific item here
-          ],
+              SizedBox(height: 16),
+              Text(
+                "About ",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                description,
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -153,27 +166,25 @@ class ItemPage extends StatelessWidget {
 }
 
 // Replace the imagePath with the actual paths to your pizza images
-class PizzaItem {
+class ColaItem {
   final String name;
   final String imagePath;
+  final description;
 
-  PizzaItem({required this.name, required this.imagePath});
+  ColaItem({required this.name, required this.imagePath, this.description});
 }
 
-List<PizzaItem> pizzaItems = [
-  PizzaItem(
-    name: 'Pepsi',
+List<ColaItem> ColaItems = [
+  ColaItem(
+    name: 'Pepsi Cola',
     imagePath: 'images/10.png',
+    description:
+        ' Pepsi is known for its sweet and refreshing taste, and it contains carbonated water, high fructose corn syrup, caramel color, phosphoric acid, natural flavors, caffeine, and citric acid.',
   ),
-  PizzaItem(
+  ColaItem(
     name: 'Coca Cola',
     imagePath: 'images/11.png',
+    description:
+        'Coca Cola is known for its sweet and refreshing taste, and it contains carbonated water, high fructose corn syrup, caramel color, phosphoric acid, natural flavors, caffeine, and citric acid.',
   ),
-  // PizzaItem(
-  //   name: 'Cheese pizza',
-  //   imagePath: 'images/7.png',
-  // ),
-
-
-  // Add more pizza items here if needed
 ];

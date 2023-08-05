@@ -27,22 +27,22 @@ class BurgerPage extends StatelessWidget {
         ),
       ),
       body: GridView.count(
+        padding: EdgeInsets.all(10),
         crossAxisCount: 2,
-        //disable scroll functionallity of grid view and will scroll with list view only
-        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         children: [
-          for (int index = 0; index < pizzaItems.length; index++)
-            PizzaCard(
-              name: pizzaItems[index].name,
-              imagePath: pizzaItems[index].imagePath,
+          for (int index = 0; index < BurgerItemss.length; index++)
+            BurgerCard(
+              name: BurgerItemss[index].name,
+              imagePath: BurgerItemss[index].imagePath,
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ItemPage(
-                      name: pizzaItems[index].name,
-                      imagePath: pizzaItems[index].imagePath,
+                      name: BurgerItemss[index].name,
+                      imagePath: BurgerItemss[index].imagePath,
+                      description: BurgerItemss[index].description,
                     ),
                   ),
                 );
@@ -54,12 +54,12 @@ class BurgerPage extends StatelessWidget {
   }
 }
 
-class PizzaCard extends StatelessWidget {
+class BurgerCard extends StatelessWidget {
   final String name;
   final String imagePath;
   final VoidCallback onPressed;
 
-  PizzaCard({
+  BurgerCard({
     required this.name,
     required this.imagePath,
     required this.onPressed,
@@ -100,8 +100,10 @@ class PizzaCard extends StatelessWidget {
 class ItemPage extends StatelessWidget {
   final String name;
   final String imagePath;
+  final String description;
 
-  ItemPage({required this.name, required this.imagePath});
+  ItemPage(
+      {required this.name, required this.imagePath, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -127,25 +129,36 @@ class ItemPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              imagePath,
-              height: 200,
-              width: 200,
-            ),
-            SizedBox(height: 16),
-            Text(
-              name,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+      //i want to place body part in scroll view
+
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Image.asset(
+                imagePath,
+                height: 200,
+                width: 200,
               ),
-            ),
-            // Add more details or actions related to the specific item here
-          ],
+              SizedBox(height: 16),
+              Text(
+                "About ",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                description,
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -153,27 +166,28 @@ class ItemPage extends StatelessWidget {
 }
 
 // Replace the imagePath with the actual paths to your pizza images
-class PizzaItem {
+class BurgerItems {
   final String name;
   final String imagePath;
+  final description;
 
-  PizzaItem({required this.name, required this.imagePath});
+  BurgerItems({required this.name, required this.imagePath, this.description});
 }
 
-List<PizzaItem> pizzaItems = [
-  PizzaItem(
+List<BurgerItems> BurgerItemss = [
+  BurgerItems(
     name: 'Beef Burger',
     imagePath: 'images/5.png',
+    description: 'Beef Buger is a Buger that is made with all the Beef',
   ),
-  PizzaItem(
-    name: 'Sausage Burger',
+  BurgerItems(
+    name: 'Saussage Burger',
     imagePath: 'images/6.png',
+    description: 'Sausage Burger is a Burger that is made with all the Sausage',
   ),
-  PizzaItem(
+  BurgerItems(
     name: 'Chicken Burger',
     imagePath: 'images/7.png',
+    description: 'Chicken Burger is a Burger that is made with all the Chicken',
   ),
-
-
-  // Add more pizza items here if needed
 ];

@@ -27,9 +27,8 @@ class PizzaPage extends StatelessWidget {
         ),
       ),
       body: GridView.count(
+        padding: EdgeInsets.all(10),
         crossAxisCount: 2,
-        //disable scroll functionallity of grid view and will scroll with list view only
-        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         children: [
           for (int index = 0; index < pizzaItems.length; index++)
@@ -43,6 +42,7 @@ class PizzaPage extends StatelessWidget {
                     builder: (context) => ItemPage(
                       name: pizzaItems[index].name,
                       imagePath: pizzaItems[index].imagePath,
+                      description: pizzaItems[index].description,
                     ),
                   ),
                 );
@@ -100,8 +100,10 @@ class PizzaCard extends StatelessWidget {
 class ItemPage extends StatelessWidget {
   final String name;
   final String imagePath;
+  final String description;
 
-  ItemPage({required this.name, required this.imagePath});
+  ItemPage(
+      {required this.name, required this.imagePath, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -127,25 +129,36 @@ class ItemPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              imagePath,
-              height: 200,
-              width: 200,
-            ),
-            SizedBox(height: 16),
-            Text(
-              name,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+      //i want to place body part in scroll view
+
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Image.asset(
+                imagePath,
+                height: 200,
+                width: 200,
               ),
-            ),
-            // Add more details or actions related to the specific item here
-          ],
+              SizedBox(height: 16),
+              Text(
+                "About ",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                description,
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -156,26 +169,53 @@ class ItemPage extends StatelessWidget {
 class PizzaItem {
   final String name;
   final String imagePath;
+  final description;
 
-  PizzaItem({required this.name, required this.imagePath});
+  PizzaItem({required this.name, required this.imagePath, this.description});
 }
 
 List<PizzaItem> pizzaItems = [
   PizzaItem(
     name: 'Vegie pizza',
     imagePath: 'images/1.png',
+    description: 'Vegie pizza is a pizza that is made with all the vegitables',
   ),
   PizzaItem(
     name: 'Chicken pizza',
     imagePath: 'images/2.png',
+    description: 'Chicken pizza is a pizza that is made with all the chicken',
   ),
   PizzaItem(
     name: 'Cheese pizza',
     imagePath: 'images/3.png',
+    description: 'Cheese pizza is a pizza that is made with all the cheese',
   ),
   PizzaItem(
     name: 'Beef Pizza',
     imagePath: 'images/4.png',
+    description: 'Beef pizza is a pizza that is made with all the beef',
+  ),
+  PizzaItem(
+    name: 'Pepperoni Pizza',
+    imagePath: 'images/18.png',
+    description:
+        'Pepperoni pizza is a pizza that is made with all the pepperoni',
+  ),
+  PizzaItem(
+    name: 'Mushroom Pizza',
+    imagePath: 'images/19.png',
+    description: 'Mushroom pizza is a pizza that is made with all the mushroom',
+  ),
+  PizzaItem(
+    name: 'Sausage Pizza',
+    imagePath: 'images/20.png',
+    description: 'Sausage pizza is a pizza that is made with all the sausage',
+  ),
+  PizzaItem(
+    name: 'Pineapple Pizza',
+    imagePath: 'images/21.png',
+    description:
+        'Pineapple pizza is a pizza that is made with all the pineapple',
   ),
 
   // Add more pizza items here if needed

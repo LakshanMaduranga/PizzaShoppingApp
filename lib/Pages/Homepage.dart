@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shop_app/Pages/CartPage.dart';
 import 'package:shop_app/Pages/ItemPage.dart';
 import 'package:shop_app/widgets/CategoriesWidget.dart';
@@ -10,7 +11,9 @@ class HomePage extends StatelessWidget {
   int index=1;
   @override
   Widget build(BuildContext contrxt) {
+    
     return Scaffold(
+      
       body: ListView(
         children: [
           HomeAppBar(),
@@ -103,5 +106,8 @@ class HomePage extends StatelessWidget {
       ),
 
     );
+    //create loading screen
+   
   }
 }
+

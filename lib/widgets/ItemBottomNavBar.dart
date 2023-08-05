@@ -24,7 +24,7 @@ class ItemBottomNavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "\$15",
+            "\$7.00",
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
@@ -44,11 +44,11 @@ class ItemBottomNavBar extends StatelessWidget {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.redAccent),
               padding: MaterialStateProperty.all(
-                EdgeInsets.symmetric(vertical: 13,horizontal: 15),
+                EdgeInsets.symmetric(vertical: 13, horizontal: 15),
               ),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
-              ),
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30))),
             ),
           )
         ],
