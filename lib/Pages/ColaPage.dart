@@ -28,7 +28,6 @@ class ColaPage extends StatelessWidget {
       ),
       body: GridView.count(
         padding: EdgeInsets.all(10),
-
         crossAxisCount: 2,
         shrinkWrap: true,
         children: [
@@ -70,7 +69,6 @@ class ColaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
-
       child: Card(
         elevation: 5,
         margin: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -137,7 +135,6 @@ class ItemPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Image.asset(
@@ -181,12 +178,13 @@ List<ColaItem> ColaItems = [
   ColaItem(
     name: 'Pepsi Cola',
     imagePath: 'images/10.png',
-    description: ' Pepsi is known for its sweet and refreshing taste, and it contains carbonated water, high fructose corn syrup, caramel color, phosphoric acid, natural flavors, caffeine, and citric acid.',
+    description:
+        ' Pepsi is known for its sweet and refreshing taste, and it contains carbonated water, high fructose corn syrup, caramel color, phosphoric acid, natural flavors, caffeine, and citric acid.',
   ),
   ColaItem(
     name: 'Coca Cola',
     imagePath: 'images/11.png',
-    description: 'Coca Cola is known for its sweet and refreshing taste, and it contains carbonated water, high fructose corn syrup, caramel color, phosphoric acid, natural flavors, caffeine, and citric acid.',
+    description:
+        'Coca Cola is known for its sweet and refreshing taste, and it contains carbonated water, high fructose corn syrup, caramel color, phosphoric acid, natural flavors, caffeine, and citric acid.',
   ),
-
 ];

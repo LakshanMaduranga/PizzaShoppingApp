@@ -28,7 +28,6 @@ class IceCreamPage extends StatelessWidget {
       ),
       body: GridView.count(
         padding: EdgeInsets.all(10),
-
         crossAxisCount: 2,
         shrinkWrap: true,
         children: [
@@ -70,7 +69,6 @@ class IceCreamCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
-
       child: Card(
         elevation: 5,
         margin: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -137,7 +135,6 @@ class ItemPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
-
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Image.asset(
@@ -181,12 +178,13 @@ List<IceCreamItem> IceCreamItems = [
   IceCreamItem(
     name: 'Cherry Ice Cream',
     imagePath: 'images/12.png',
-    description: 'Cherry Ice Cream is a world famous Ice Cream,Which is made from Cherry',
+    description:
+        'Cherry Ice Cream is a world famous Ice Cream,Which is made from Cherry',
   ),
   IceCreamItem(
     name: 'Chocolate Ice Cream',
     imagePath: 'images/13.png',
-    description: 'Chocolate Ice Cream is a world famous Ice Cream,Which is made from Chocolate',
+    description:
+        'Chocolate Ice Cream is a world famous Ice Cream,Which is made from Chocolate',
   ),
-
 ];

@@ -15,8 +15,7 @@ class ItemPage extends StatelessWidget {
           ItemAppBar(),
           Padding(
             padding: EdgeInsets.all(16),
-            child: Image.asset("images/1.png",
-                height: 300),
+            child: Image.asset("images/1.png", height: 300),
           ),
           Arc(
             edge: Edge.TOP,
@@ -36,7 +35,6 @@ class ItemPage extends StatelessWidget {
                           Text("Vegie Pizza",
                               style: TextStyle(
                                   fontSize: 28,
-
                                   color: Colors.redAccent,
                                   fontWeight: FontWeight.bold)),
                         ],

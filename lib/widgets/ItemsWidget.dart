@@ -16,7 +16,7 @@ class ItemsWidget extends StatelessWidget {
     "Cherry Ice Cream",
     "Choco Ice Cream",
   ];
-  List price =[
+  List price = [
     "\$ 7.00",
     "\$ 8.00",
     "\$ 10.00",
@@ -68,7 +68,6 @@ class ItemsWidget extends StatelessWidget {
                         ),
                       ),
                     ),
-
                     Icon(
                       Icons.favorite_border,
                       color: Colors.redAccent,
@@ -79,13 +78,15 @@ class ItemsWidget extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, "itemPage");
                   },
-
-                  child: Image.asset("images/$i.png",
+                  child: Image.asset(
+                    "images/$i.png",
                     height: 120,
                     width: 120,
                   ),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 Container(
                   padding: EdgeInsets.only(bottom: 8),
                   // alignment: Alignment.centerLeft,
@@ -98,7 +99,6 @@ class ItemsWidget extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-
                 ),
 
                 // product description

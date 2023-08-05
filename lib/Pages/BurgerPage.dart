@@ -28,7 +28,6 @@ class BurgerPage extends StatelessWidget {
       ),
       body: GridView.count(
         padding: EdgeInsets.all(10),
-
         crossAxisCount: 2,
         shrinkWrap: true,
         children: [
@@ -70,7 +69,6 @@ class BurgerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
-
       child: Card(
         elevation: 5,
         margin: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -137,7 +135,6 @@ class ItemPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Image.asset(
@@ -193,5 +190,4 @@ List<BurgerItems> BurgerItemss = [
     imagePath: 'images/7.png',
     description: 'Chicken Burger is a Burger that is made with all the Chicken',
   ),
-
 ];

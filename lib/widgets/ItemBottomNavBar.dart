@@ -44,11 +44,11 @@ class ItemBottomNavBar extends StatelessWidget {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.redAccent),
               padding: MaterialStateProperty.all(
-                EdgeInsets.symmetric(vertical: 13,horizontal: 15),
+                EdgeInsets.symmetric(vertical: 13, horizontal: 15),
               ),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
-              ),
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30))),
             ),
           )
         ],

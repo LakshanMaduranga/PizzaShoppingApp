@@ -28,7 +28,6 @@ class PizzaPage extends StatelessWidget {
       ),
       body: GridView.count(
         padding: EdgeInsets.all(10),
-
         crossAxisCount: 2,
         shrinkWrap: true,
         children: [
@@ -70,7 +69,6 @@ class PizzaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
-
       child: Card(
         elevation: 5,
         margin: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -137,7 +135,6 @@ class ItemPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Image.asset(
@@ -201,7 +198,8 @@ List<PizzaItem> pizzaItems = [
   PizzaItem(
     name: 'Pepperoni Pizza',
     imagePath: 'images/18.png',
-    description: 'Pepperoni pizza is a pizza that is made with all the pepperoni',
+    description:
+        'Pepperoni pizza is a pizza that is made with all the pepperoni',
   ),
   PizzaItem(
     name: 'Mushroom Pizza',
@@ -216,7 +214,8 @@ List<PizzaItem> pizzaItems = [
   PizzaItem(
     name: 'Pineapple Pizza',
     imagePath: 'images/21.png',
-    description: 'Pineapple pizza is a pizza that is made with all the pineapple',
+    description:
+        'Pineapple pizza is a pizza that is made with all the pineapple',
   ),
 
   // Add more pizza items here if needed

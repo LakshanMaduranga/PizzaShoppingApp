@@ -39,20 +39,36 @@ class _LoadingPageState extends State<LoadingPage>
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Color(0xFFEDECF2),Color(0xFFEDECF2)],
+          gradient: LinearGradient(
+              colors: [Color(0xFFEDECF2), Color(0xFFEDECF2)],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter),
-          ),
+        ),
         child: Column(
           children: [
             //place this image in center
-            SizedBox(height:220,),
-            Image.asset("images/2.png",height: 200,width: 200,alignment: Alignment.center,),
-            SizedBox(height: 20,),
-            Text("Welcome to Hot Pizza",style: TextStyle(color: Colors.redAccent,fontSize: 20,fontWeight: FontWeight.bold),),
+            SizedBox(
+              height: 220,
+            ),
+            Image.asset(
+              "images/2.png",
+              height: 200,
+              width: 200,
+              alignment: Alignment.center,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Welcome to Hot Pizza",
+              style: TextStyle(
+                  color: Colors.redAccent,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
           ],
         ),
-        ),
+      ),
     );
   }
 }
